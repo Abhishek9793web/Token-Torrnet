@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import detectEthereumProvider from "@metamask/detect-provider";
 import Web3 from "web3";
 import "./App.css"; // Import CSS file
+import myImage from './torr.png';
+// import background from './background.jpg';
+
+
+import { FaAngleRight } from "react-icons/fa";
+import { AiFillTwitterCircle, AiFillInstagram, AiFillSkype } from "react-icons/ai";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import { FaArrowUp } from 'react-icons/fa';
+
 
 // Import your ERC20 token ABI here
 import tokenABI from "./abi.json";
@@ -279,8 +288,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      
         <h1>ERC20 Token Website</h1>
         <div className="card1">
+        {/* <img className="bg" src={background} alt="bg" /> */}
           <p className="token-detail">
             Token Name: <span id="tokenName">{tokenName}</span>
           </p>
@@ -305,6 +316,7 @@ function App() {
           <p className="token-detail">
             Decimals: 10<span id="decimals">{decimals}</span>
           </p>
+          <img  className="img"src={myImage} alt="img" />
         </div>
         <button className="connect-button" onClick={connectToMetaMask}>
           Connect with MetaMask
@@ -456,11 +468,92 @@ function App() {
           </div>
         </div>
       </header>
+      <section className='footer'>
+
+        <div class="footer-top">
+          <div class="box">
+            <div class="row">
+
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>ERC-20 Token</h3>
+                <p>
+                  GLA UNIVERSITY <br />
+                  mathura, UP 281406<br />
+                  INDIA <br /><br />
+                  <strong>Phone:</strong> +1 5589 55488 55<br />
+                  <strong>Email:</strong> shopingzone@gmail.com<br />
+                </p>
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><FaAngleRight /> <a href="#">Home</a></li>
+                  <li><FaAngleRight /> <a href="#">About us</a></li>
+                  <li><FaAngleRight /> <a href="#">Services</a></li>
+                  <li><FaAngleRight /> <a href="#">Terms of service</a></li>
+                  <li><FaAngleRight /> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><FaAngleRight /><a href="#">Web Design</a></li>
+                  <li><FaAngleRight /> <a href="#">Web Development</a></li>
+                  <li><FaAngleRight /> <a href="#">Product Management</a></li>
+                  <li><FaAngleRight /><a href="#">Marketing</a></li>
+                  <li><FaAngleRight /> <a href="#">Graphic Design</a></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Social Networks</h4>
+                <p>Fallow our social media handle for more update.make batter create batter in your life.(o!o)</p>
+                <div class="social-links mt-3">
+                  <a href="/" class="twitter"><AiFillTwitterCircle /></a>
+                  <a href="/" class="facebook"><BsFacebook /></a>
+                  <a href="/" class="instagram"><AiFillInstagram /></a>
+                  <a href="/" class="google-plus"><AiFillSkype /></a>
+                  <a href="/" class="linkedin"><BsLinkedin /></a>
+                </div>
+              </div>
+            </div>
+
+            <div className="copyright">
+              <p> &copy; {new Date().getFullYear()} Shopint zone. All rights reserved.</p>
+              <p> Designed by <a href="https://github.com/Abhishek9793web">Resume maker</a></p>
+            </div>
+          </div>
+          <a href="/" className="back-to-top "><FaArrowUp /></a>
+        </div>
+
+
+      </section>
+
+    
+
+      <footer className="footer">
+        <p className="footer-text">© 2023 E-Commerce Store. All rights reserved.</p>
+      </footer>
     </div>
+
+
+    
+    
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
 
 // import React, { useState, useEffect, useCallback } from 'react';
 // import Web3 from 'web3';
